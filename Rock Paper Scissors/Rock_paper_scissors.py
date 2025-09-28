@@ -39,6 +39,7 @@ def display_intro():
 
 user_wins = 0
 computer_wins = 0
+draw_matches = 0
 options = ["rock", "paper", "scissors"]
 
 # ASCII art for each option
@@ -112,8 +113,10 @@ while True:
     display_choice(computer_pick)
     
     # Determine winner
+
     if user_choice == computer_pick:
         print("It's a tie!")
+        draw_matches +=1
     elif (user_choice == "rock" and computer_pick == "scissors") or \
          (user_choice == "paper" and computer_pick == "rock") or \
          (user_choice == "scissors" and computer_pick == "paper"):
@@ -128,7 +131,8 @@ print("FINAL RESULTS")
 print("="*30)
 print(f"You won {user_wins} times.")
 print(f"The computer won {computer_wins} times.")
-total_games = user_wins + computer_wins
+print(f"There were {draw_matches} draws.")
+total_games = user_wins + computer_wins + draw_matches
 if total_games > 0:
     win_percentage = (user_wins / total_games) * 100
     print(f"Your win rate: {win_percentage:.1f}%")
