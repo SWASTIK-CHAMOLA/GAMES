@@ -45,7 +45,8 @@ python rock_paper_scissors.py
 
 The game tracks:
 - Total wins for player
-- Total wins for computer  
+- Total wins for computer
+- Total number of matches that were drawn between user and computer
 - Overall win percentage
 - Game session summary
 
